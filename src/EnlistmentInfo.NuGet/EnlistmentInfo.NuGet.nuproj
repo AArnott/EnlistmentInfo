@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>1a17306b-a9c6-4c28-827c-102b8589a371</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath>$(UserProfile)\.nuget\packages\NuProj\0.10.40-beta-g6df38a957a\tools\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>EnlistmentInfo</Id>
+    <Title>EnlistmentInfo importer</Title>
+    <Summary>Import EnlistmentInfo .props and .targets from project directory or above.</Summary>
+    <Description>Import EnlistmentInfo .props and .targets from project directory or above.</Description>
+    <Tags>MSBuild</Tags>
+    <Authors>Andrew Arnott</Authors>
+    <Owners>Andrew Arnott</Owners>
+    <Copyright>© Andrew Arnott. All rights reserved.</Copyright>
+    <ProjectUrl>http://github.com/aarnott/EnlistmentInfo</ProjectUrl>
+    <LicenseUrl>https://raw.githubusercontent.com/AArnott/EnlistmentInfo/$GitCommitIdShort$/LICENSE.txt</LicenseUrl>
+    <GenerateSymbolPackage>false</GenerateSymbolPackage>
+    <DevelopmentDependency>true</DevelopmentDependency>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="build\EnlistmentInfo.props" />
+    <Content Include="build\EnlistmentInfo.targets" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties project_1json__JSONSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
